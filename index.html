@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Grid</title>
+    <link rel="stylesheet" href="./css.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="controll">
+            <button class="start" @click="btnStart">{{buttonText}}</button>
+            <button @click="startCountDown">开始计数</button>
+            <button @click="tureCardBtn">{{tureCard}}</button>
+            <button @click="deleteBtn" :disabled="!isDelete">{{deleteText}}</button>
+            <div class="countdown" id="countdown"></div>
+        </div>
+
+        <div class="container">
+            <template v-for="(item ,index) in items" :key="item">
+                <div :class="{'item':true }">
+                    <my-card :active="item.isActive" :index="index" :items="items">{{item.text}}</my-card>
+                </div>
+            </template>
+        </div>
+        <script src="./dev.js"></script>
+</body>
+
+</html>
