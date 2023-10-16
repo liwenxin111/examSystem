@@ -182,6 +182,7 @@ a {
 } */
 
 .blastoise .innerCardBackface .image {
+    overflow: auto;
     position: absolute;
     top: 0;
     left: 0;
@@ -194,6 +195,7 @@ a {
 }
 
 .blastoise .innerCardBackface .image .question{
+        overflow: scroll;
     margin:5px;
     font-size: 16px;
 }
